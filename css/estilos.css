@@ -1,0 +1,325 @@
+@import url(estilosLiga.css);
+@import url(estilosEscuelita.css);
+@import url(estilosSenior.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: rgba(206, 224, 235, 0.5); 
+}
+
+.contenedor {
+	width:98%;
+	margin:auto;
+    /* Flexbox */
+	display:flex;
+	flex-flow:row wrap; /*es un atajo de las propiedades flex-direction y flex-wrap*/
+}
+
+.inline{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.inline1{
+    text-transform: uppercase;
+    color: blue;
+}
+
+main {
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*------------------------------------------HEADER---------------------------------------*/
+
+header{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 255, 0.8);
+}
+
+header img{
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+header h1{
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    header img{
+       height: 130px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:1024px) {
+    header h1 {
+        font-size: 2.5em;
+        padding-top: 0;
+    }
+}
+
+/*------------------------------------------SITIO OFICIAL---------------------------------------*/
+
+.sitio {
+    background-color: rgba(255, 0, 0, 0.8);
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.sitio .contenedorInterior {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sitioOficial, .lugar {
+    margin-top: 12px;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .sitio {
+        font-size: 0.7em;
+    }
+}
+
+/*------------------------------------------BARRA---------------------------------------*/
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav label {
+    float: right;
+    font-size: 30px;
+    margin: 8px 0;
+    /*para que cuando pase el cursor aparezca una manito*/
+    cursor: pointer;
+}
+
+nav ul {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 320px;
+    /*para ver como se esta desplazando*/
+    transition: all 0.1s;
+    /*para que se vaya a la izquierda*/
+    transform: translateX(-110%);
+}
+
+nav ul a {
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    padding: 15px;
+}
+
+#menu:checked ~ ul {
+    transform: translateX(0%);
+}
+
+#menu {
+    display: none;
+}
+
+@media only screen and (min-width:320px) and (max-width:1023px) {
+    nav ul a {
+        background-color: rgba(51,51,51,0.9);
+        font-size: 20px;
+        width: 98%;
+    }
+}
+
+@media (min-width:1024px) {
+    nav ul {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul a {
+        border: none;
+        display: inline;
+        color: white;
+        font-size: 1.5em;
+        margin-left: 30px;
+    }
+
+    nav ul a:hover {
+        color: chocolate;
+    }
+
+    nav label {
+        display: none;
+    }
+}
+
+/*------------------------------------------CUERPO PAG PRINCIPAL---------------------------------------*/
+
+#principal {
+	text-align: justify;
+    flex:1 1 50%;     /*primer 1 cuanto se agrandaria, segundo 1 cuando se encojeria, y el % el ancho*/
+    margin-left: 10%;
+}
+ 
+#principal article {
+	padding-bottom:10px;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+aside {
+    background-color: rgba(69, 25, 228, 0.3);
+    padding: 20px;
+	margin-bottom: 10px;
+	flex:1 1 30%;
+	margin-right: 10%;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+ 
+aside .imagenes img{
+    height:200px;
+    width: 96%;
+    margin: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+       
+    .contenedor {
+		flex-direction:column;
+    }
+
+    #principal {
+       width: 80%;
+    }
+ 
+	#principal article {
+        text-align: justify;
+        font-size: 1.5em;
+        margin-right: 0;
+    }
+    
+	aside {
+		flex-direction:row;
+        flex:0;
+        width: 80%;
+        margin-left: 10%;
+	}
+ 
+	aside .imagenes {
+        flex-grow:1;  /*para que abarque el 100%*/
+    }
+}
+
+/*-----------------------------------FOOTER----------------------------------------------------*/
+
+footer {
+    width: 100%;
+    margin-top: 10px;
+    background: rgba(43, 41, 41, 0.5);
+}
+
+.escudoFooter {
+    margin-bottom: 10px;
+}
+
+.escudoFooter img {
+    width: auto;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sociales {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.sociales img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; 
+}
+
+.sociales a {
+    margin: 0 auto;
+}
+
+.datos p {
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+@media (min-width:1024px) {
+    footer .contenedorInterior {
+        display: flex;
+        align-items: center;
+    }
+
+    footer .escudoFooter, .sociales {
+        width: 20%;
+    }
+
+    footer .escudoFooter {
+        margin-left: 10%;
+    }
+
+    footer .escudoFooter img {
+        float: left;
+    }
+
+    footer .datos {
+        width: 40%;
+    }
+
+    footer .datos p {
+        text-align: end;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1160px) {
+    footer .datos p {
+        font-size: 1.1em;
+    }
+}
+

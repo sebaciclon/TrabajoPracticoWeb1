@@ -1,0 +1,212 @@
+body{
+    background-image: url(foto.jpg);
+    background-size: 100vw 100vh; /*para que la imagen siempre tenga el 100% de la ventana*/
+    background-attachment: fixed; /*para que la imagen quede fija en el scroll*/
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    width: 270px;
+    margin: 0 auto;
+    background: rgba(206, 45, 45, 0.4);
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+input, select{
+    width: 100%;
+    margin-top: 0px;
+    padding: 7px;
+    box-sizing: border-box; /*para que los input ocupen el 100%*/
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+p{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
+
+#btnAdd1, #btnAdd3{   /*uso # porque boton es un id*/
+    width: 100%;
+    background: rgb(221, 142, 142);
+    color: aliceblue;
+    margin-top: 10px;
+    font-weight: bold;
+    border-block: black;
+    border-radius: 5px;
+    transition: background 1s, color 1s, border 1s; /*transicion en la animacion del boton*/
+}
+
+#btnErase{
+    width: 100%;
+    background: rgb(226, 99, 99);
+    color: aliceblue;
+    margin-top: 10px;
+    font-weight: bold;
+    border-block: black;
+    border-radius: 5px;
+    transition: background 1s, color 1s, border 1s; /*transicion en la animacion del boton*/ 
+}
+
+#btnAdd1:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/
+    cursor: pointer;
+    background: rgb(136, 164, 223);
+    color: black;
+    font-weight: bold;
+}
+
+#btnAdd3:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/
+    cursor: pointer;
+    background: rgb(136, 164, 223);
+    color: black;
+    font-weight: bold;
+}
+
+#btnErase:hover{   /*seudoclase usada para dar animacion al posicionarme sobre el boton*/
+    cursor: pointer;
+    background: rgb(221, 174, 19);
+    color: black;
+    font-weight: bold;
+}
+
+#contenedorCaptcha{
+    width: 200px;
+    margin-top: 10px;
+    margin: 0 auto;
+    padding: 7px;
+    box-sizing: border-box; /*para que los input ocupen el 100%*/
+    font-size: 0.9em;
+    border: none;
+    background: rgba(72, 98, 212, 0.8);
+    color: black; 
+    text-align: center;
+    border-radius: 10px;
+}
+#captchaTitulo, #numerosCaptcha{
+    font-size: 1em;
+    text-align: center;
+    
+    margin-bottom: .3em;
+    margin-top: .3em;
+}
+
+#captchaTitulo{
+    padding: .6em;
+    float: left;
+    width: 40%;
+}
+
+#numerosCaptcha{
+    color: cornsilk;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: line-through;
+    width: 27%;
+    font-size: large;
+    padding: .3em;
+    background-image: url(cierre-arriba-fondo-texturizado-marmol-negro_53876-63511.jpg);
+    float: left;
+    border-radius: 5px;
+}
+
+#tabla {
+    margin: 0 auto;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0.3em;
+    background: rgba(243, 240, 240, 0.849);;
+}
+
+th, caption {
+    background: rgba(206, 45, 45, 0.4);
+    color: rgb(255, 255, 255);
+}
+
+.ocultarColumna{
+    display: none;
+}
+
+.btnBorrarUno, .btnEditar{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btnBorrarUno{
+    background-color: red;
+    float: left;
+}
+
+.btnBorrarUno:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 1s;
+}
+
+.btnEditar{
+    background-color: blue;
+    float: right;
+}
+
+.btnEditar:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 1s;
+}
+
+
+.accion{
+    width: 135px;
+}
+
+caption {
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.resaltarArquero {
+    background-color: rgba(226, 36, 36, 0.5);
+}
+
+.resaltarDefensor {
+    background-color: rgba(233, 190, 37, 0.5);
+}
+
+.resaltarVolante {
+    background-color: rgba(50, 201, 23, 0.5);
+}
+
+.resaltarDelantero {
+    background-color: rgba(70, 42, 226, 0.5);
+}
+
+.esconder{
+    display: none;
+}
+
+.rojo{
+    color: red;
+}
+
+@media(max-width: 480px){
+    form{
+        width: 100%;
+    }
+}

@@ -1,0 +1,67 @@
+main #escuelita {
+    width: 100%;
+}
+
+.fotoEscuelita img{
+    width: auto;
+    height: 390px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#escuelita h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#escuelita p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#escuelita a {
+    width: 100px;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .fotoEscuelita img{
+        height: 280px;
+    }
+}
+
+@media (min-width:768px) {
+    .fotoEscuelita img{
+        width: auto;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    
+    #escuelita p{
+        text-align: justify;
+        font-size: 1.6em; 
+    }
+    #escuelita h2 {
+        margin-bottom: 10px;
+    }
+}
+
+/*------------------------------------------ESTILOS SOCIOS---------------------------------------*/
+
+#socios p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#socios a {
+    width: 100px;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 5px;
+}

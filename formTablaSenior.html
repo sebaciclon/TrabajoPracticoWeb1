@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscripcion Futbol Senior</title>
+    <link rel="stylesheet" href="css/estiloFormTablaSenior.css">
+    <link rel="icon" href="img/Escudo transparente.ico">
+</head>
+
+<body>
+    <div class="contenedor">
+        <form action="formTablaSenior.html" method="dialog" autocomplete="off" id="formulario">
+            <p>APELLIDO Y NOMBRE(*)</p>
+            <input type="text" id="nombre" required>
+            <p>EDAD(*)</p>
+            <input type="number" id="edad" required>
+            <p>FECHA DE NACIMIENTO(*)</p>
+            <input type="date" id="fecha" required>
+            <p>PUESTO EN QUE JUEGA(*)</p>
+            <select name="Puesto" id="puesto" required>
+                <option value="Seleccione" selected>Seleccione un Puesto</option>
+                <option value="Arquero">Arquero</option>
+                <option value="Defensor">Defensor</option>
+                <option value="Volante">Volante</option>
+                <option value="Delantero">Delantero</option>
+            </select>
+            <div id="mensaje"></div>
+            <p id="captchaTitulo">CAPTCHA</p>
+            <p id="numerosCaptcha"></p>
+            <input type="text" name="captcha" placeholder="¿Qué número ve en la imagen?" id="captcha">
+            <button type="reset" id="btnAdd1">AGREGARx1</button>
+            <button type="reset" id="btnAdd3">AGREGARx3</button>
+            <button type="reset" id="btnErase">VACIAR LISTA INSCRIPTOS</button>
+        </form>
+   
+    <div>
+        <form autocomplete="off">
+            <p>BUSCAR EN LISTA INSCRIPTOS</p> 
+            <input id="terminoAbuscar" type="text"> 
+        </form>
+    </div>
+    
+        
+        <table id="tabla">
+            <caption>LISTA DE INSCRIPTOS PARA FUTBOL SENIOR 2020</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>EDAD</th>
+                    <th>FECHA NACIMIENTO</th>
+                    <th>PUESTO</th>
+                    <th class="accion">ACCION</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTabla">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr class='noBuscar esconder'>
+                    <td colspan="6"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+    
+    <script src="js/formTablaSenior.js"></script>
+    
+</body>
+</html>

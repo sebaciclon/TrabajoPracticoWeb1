@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Inscipcion Escuelita</title>
+    <link rel="stylesheet" href="css/estilosForm.css"> 
+    <link rel="icon" href="img/Escudo transparente.ico">
+</head>
+<body>
+    <form id="formulario">
+        <h2>INSCRIPCION ESCUELITA</h2>
+        <input id="nombre_padre" type="text" name="nombre_padre" required placeholder="Nombre y Apellido (Padre/Madre/Tutor)">
+        <input id="vinculo" type="text" name="vinculo" required placeholder="Vinculo familiar con el niño">
+        <input id="nombre_alumno" type="text" name="nombre_alumno" required placeholder="Nombre del Alumno">
+        <input id="dni" type="number" name="dni" required placeholder="DNI" min="1">
+        <b id="f_nac_titulo">FECHA NACIMIENTO</b> 
+        <input id="fecha" required type="date" min="1900-01-01">
+        <input id="domicilio" type="text" name="domicilio" required placeholder="Domicilio">
+        <input id="escuela" type="text" name="escuela" required placeholder="Escuela a la que concurre">
+        <textarea id="observacion" name="observacion" placeholder="Escriba aquí alguna observación"></textarea>
+        <p id="captchaTitulo">CAPTCHA</p>
+        <p id="numerosCaptcha"></p>
+        <input id="captcha" type="number" name="captcha" placeholder="Introduzca el nùmero anterior">
+        <input id="boton" type="submit" value="CONFIRMAR INSCRIPCION">
+    </form>
+    <script src="js/validar.js"></script>
+</body>
+</html>
